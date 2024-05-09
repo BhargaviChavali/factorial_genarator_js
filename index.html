@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+    <h1 id="h1">FACTORIAL GENARATOR</h1>
+    <form id="myform">
+        <input type="text" id="ip1" placeholder="Enter a number"><br><br>
+        <p id =p1>Factorial of given number : </p>
+        <input type="text" id="ip2"><br><br>
+    <button id="bt1">Submit</button>
+    <a href="./index.html"><button id="bt2">Reset</button></a>
+    </form>
+    </div>
+    <script>
+        document.body.display="flex";
+        document.body.alignItems="center";
+
+        let getm1=document.getElementById("main");
+        getm1.setAttribute("style","Width:40vw;height:500px;border:4px solid black;margin:100px;margin-left:500px;border-radius:20px; background-image:url(https://wallpaperset.com/w/full/f/4/4/28686.jpg);box-shadow:7px 7px 7px;");
+
+        let geth1=document.getElementById("h1");
+        geth1.setAttribute("style","margin:50px;margin-left:50px;font-size:40px;color:#FFD662FF")
+
+        let getip1=document.getElementById("ip1");
+        getip1.setAttribute("style","margin-left:100px;background-color:rgb(199, 237, 225);border:none;padding:10px;font-size:30px");
+
+        let getip2=document.getElementById("ip2");
+        getip2.setAttribute("style","padding:10px;border:none;margin-left:100px;font-size:50px;width:370px;background-color:transparent;color:pink");
+
+        let getp1=document.getElementById("p1");
+        getp1.setAttribute("style","margin-left:100px;font-size:30px;");
+
+        let getbt1=document.getElementById("bt1");
+        getbt1.setAttribute("style","padding:10px;margin-left:105px;font-size:15px;box-shadow:5px 5px 5px black;background-color: rgb(102, 228, 102);");
+
+        let getbt2=document.getElementById("bt2");
+        getbt2.setAttribute("style","padding:10px;margin-left:10px;font-size:15px;background-color: rgb(233, 115, 115);box-shadow:5px 5px 5px black");
+
+
+        getbt1.addEventListener("click", (e) => {
+            e.preventDefault();
+        var num = parseInt(document.getElementById("ip1").value);
+        let fact = 1;
+        for (let i = 1; i <= num; i++) {
+            fact =fact*i;
+        }
+        console.log("Factorial:", fact);
+        getip2.value = fact;
+        });
+
+        getip1.addEventListener("focus",()=>{
+            getip1.style.borderolor="blue";
+        });
+
+        getip1.addEventListener("input",()=>{
+            getip1.style.backgroundColor="pink";
+        });
+    </script>
+</body>
+</html>
